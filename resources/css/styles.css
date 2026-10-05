@@ -1,0 +1,351 @@
+/* ---------- Entire Website ---------- */
+
+body {
+    margin: 30px;
+    padding: 0;
+
+    background-color: #b8cbd6;
+    border: 4px solid #718b9a;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #243640;
+
+    min-height: 100vh;
+}
+
+
+/* ---------- Navigation Bar ---------- */
+
+.navbar {
+    background-color: #9fb4c0 !important;
+    border-bottom: 3px solid #647f8f;
+    padding: 15px;
+}
+
+.navbar .btn {
+    background-color: #4f7388;
+    border: 2px solid #405f71;
+
+    color: #eef4f7;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.navbar .btn:hover {
+    background-color: #365b70;
+    border-color: #304f60;
+    color: #ffffff;
+}
+
+
+/* ---------- Main Content ---------- */
+
+main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* ---------- Headers ---------- */
+
+h1 {
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: #294f64;
+
+    margin-bottom: 35px;
+}
+
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #365e73;
+}
+
+
+/* ---------- Text ---------- */
+
+p,
+li {
+    color: #2d414c;
+    line-height: 1.6;
+}
+
+
+/* ---------- Images ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    border: 3px solid #718b9a;
+    border-radius: 8px;
+}
+
+
+/* ---------- Hobby Cards ---------- */
+
+.card {
+    background-color: #a9bec9;
+
+    border: 2px solid #718b9a;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #294f64;
+}
+
+.card-text {
+    color: #293e49;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border: none;
+    border-bottom: 3px solid #718b9a;
+    border-radius: 6px 6px 0 0;
+}
+
+
+/* ---------- Project Accordion ---------- */
+
+.accordion-item {
+    background-color: #a9bec9;
+    border: 2px solid #718b9a;
+}
+
+.accordion-button {
+    background-color: #91aab8;
+    color: #243f4f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.accordion-button.collapsed {
+    background-color: #9fb4c0;
+    color: #294f64;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #7898aa;
+    color: #173747;
+}
+
+.accordion-button:hover {
+    background-color: #88a4b3;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(63, 100, 120, 0.3);
+}
+
+.accordion-body {
+    background-color: #adbfca;
+    color: #293e49;
+}
+
+
+/* ---------- Links ---------- */
+
+main a {
+    color: #24536c;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #173b4e;
+}
+
+
+/* ---------- Resume ---------- */
+
+.resume section {
+    background-color: #a9bec9;
+
+    border: 2px solid #718b9a;
+    border-radius: 8px;
+
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.resume section h2 {
+    border-bottom: 2px solid #718b9a;
+    padding-bottom: 8px;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #9fb4c0;
+
+    border-top: 3px solid #647f8f;
+
+    text-align: center;
+    padding: 25px;
+}
+
+footer a {
+    color: #294f64;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #173b4e;
+    text-decoration: underline;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+
+    body {
+        margin: 10px;
+    }
+
+    main {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar .btn {
+        margin: 3px;
+    }
+}
+/* ---------- Smaller Screens ---------- */
+
+@media (max-width: 750px) {
+
+    body {
+        margin: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    main > section:has(article) {
+        flex-direction: column;
+    }
+
+    article img {
+        max-width: 400px;
+    }
+}
+/* ---------- Resume Two-Column Layout ---------- */
+
+.resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.resume h1 {
+    grid-column: 1 / -1;
+}
+
+.resume section {
+    padding: 20px;
+
+    background-color: #f3f8fa;
+
+    border: 3px solid #a9bdc5;
+    border-radius: 8px;
+}
+
+.resume article {
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.resume section h2 {
+    border-bottom: 2px solid #a9bdc5;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 750px) {
+    .resume {
+        grid-template-columns: 1fr;
+    }
+
+    .resume h1 {
+        grid-column: 1;
+    }
+}
+/* Keep all images from overflowing their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Keep hobby card images consistent */
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Give resume sections consistent spacing */
+.resume section {
+    margin-bottom: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+
+    body {
+        margin: 10px;
+    }
+
+    main {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .accordion-body {
+        padding: 15px;
+    }
+}
